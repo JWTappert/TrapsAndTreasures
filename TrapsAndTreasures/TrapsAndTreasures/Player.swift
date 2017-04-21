@@ -23,7 +23,7 @@ class Player{
     }
     
     func move(){
-        totalMovement--;
+        self.totalMovementPoints -= 1;
             
     }
     

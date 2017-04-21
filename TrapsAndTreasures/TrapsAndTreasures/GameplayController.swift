@@ -25,7 +25,7 @@ class GameplayController: UIViewController {
     
     
     @IBAction func playerTapped(_ sender: Any) {
-        player.move()
+        
     }
 }
 
