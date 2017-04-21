@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,28 +70,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fly-Fishing-logo-light-CMYK" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-0b-v6S" userLabel="PlayerView">
-                                <rect key="frame" x="67" y="262" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99901709920072512" green="0.99285961129440148" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-A9-oq7">
+                                <rect key="frame" x="87" y="439" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Agu-da-yDr" appends="YES" id="ova-sD-Fwk"/>
-                                </connections>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Slot 1" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-jW-Ji1">
-                                <rect key="frame" x="67" y="519" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-e8-Dig">
+                                <rect key="frame" x="87" y="331" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-uK-f4G">
+                                <rect key="frame" x="87" y="223" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-Yx-Chj">
+                                <rect key="frame" x="87" y="115" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fv-Uk-c6D">
+                                <rect key="frame" x="87" y="547" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Tw-uK-f4G" firstAttribute="top" secondItem="tLK-Yx-Chj" secondAttribute="bottom" constant="8" id="06d-Ks-ccH"/>
+                            <constraint firstItem="Bgf-e8-Dig" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="7DV-sD-b3s"/>
+                            <constraint firstAttribute="bottom" secondItem="6Fv-Uk-c6D" secondAttribute="bottom" constant="20" symbolic="YES" id="Jsx-cC-0rB"/>
+                            <constraint firstItem="tLK-Yx-Chj" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="QEs-5G-N0R"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="trailing" secondItem="dPx-A9-oq7" secondAttribute="trailing" id="SDg-mJ-O9M"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="top" secondItem="dPx-A9-oq7" secondAttribute="bottom" constant="8" symbolic="YES" id="a5m-sF-hom"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="5Tw-uK-f4G" secondAttribute="leading" id="c8S-vK-gbp"/>
+                            <constraint firstItem="dPx-A9-oq7" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="det-6n-pA6"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="Bgf-e8-Dig" secondAttribute="leading" id="dpU-Gw-PHC"/>
+                            <constraint firstItem="dPx-A9-oq7" firstAttribute="top" secondItem="Bgf-e8-Dig" secondAttribute="bottom" constant="8" id="fHL-WU-JNB"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="dPx-A9-oq7" secondAttribute="leading" id="fLm-Oa-ZOr"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="tLK-Yx-Chj" secondAttribute="leading" id="fmX-yq-gnw"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="top" secondItem="dPx-A9-oq7" secondAttribute="bottom" constant="8" id="hGr-Wg-3E6"/>
+                            <constraint firstItem="5Tw-uK-f4G" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="j9i-w1-Xn7"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="top" secondItem="M6H-xp-6R1" secondAttribute="top" constant="547" id="qHV-5P-7XU"/>
+                            <constraint firstItem="Bgf-e8-Dig" firstAttribute="top" secondItem="5Tw-uK-f4G" secondAttribute="bottom" constant="8" id="tj3-lr-VkS"/>
+                            <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="M6H-xp-6R1" secondAttribute="leadingMargin" constant="71" id="ydj-Vd-EHe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcU-uy-4Qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,7 +164,4 @@
             <point key="canvasLocation" x="-380" y="116"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Fly-Fishing-logo-light-CMYK" width="1382" height="1382"/>
-    </resources>
 </document>
