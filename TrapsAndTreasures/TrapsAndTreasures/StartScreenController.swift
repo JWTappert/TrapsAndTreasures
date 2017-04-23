@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartScreenController: UIViewController {
+class StartScreenController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
@@ -17,15 +17,31 @@ class StartScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // handle the text fields user input through delagate callbacks
+        nameTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    //MARK: UITextFieldDelagate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // hide the keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        playerNameLabel.text = "Welcome, \(String(describing: textField.text!))!"
     }
 
     //MARK: Actions
+    @IBAction func setUsername(_ sender: UIButton) {
+        playerNameLabel.text = "Enter your username"
+    }
     
 }
 

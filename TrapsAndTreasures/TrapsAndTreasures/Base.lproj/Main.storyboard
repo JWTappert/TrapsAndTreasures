@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I6n-Yh-dAG">
-                                <rect key="frame" x="16" y="40" width="343" height="110.5"/>
+                                <rect key="frame" x="16" y="278" width="343" height="110.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-Iy-cyG">
                                         <rect key="frame" x="92" y="0.0" width="159" height="20.5"/>
@@ -38,10 +38,10 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-HP-zLj">
-                                        <rect key="frame" x="140.5" y="80.5" width="62" height="30"/>
-                                        <state key="normal" title="Continue"/>
+                                        <rect key="frame" x="154.5" y="80.5" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
                                         <connections>
-                                            <segue destination="gEh-om-1Vp" kind="show" id="uF0-vv-Iok"/>
+                                            <action selector="setUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mh1-9c-kMH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -49,12 +49,28 @@
                                     <constraint firstAttribute="trailing" secondItem="nQ1-0U-oCv" secondAttribute="trailing" id="m36-fD-msW"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traps and Treasures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4o-TK-TOU">
+                                <rect key="frame" x="88.5" y="114" width="198" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UL-FN-sdr">
+                                <rect key="frame" x="164" y="562" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="gEh-om-1Vp" kind="show" id="a3c-Bz-CMZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="I6n-Yh-dAG" secondAttribute="trailing" id="aKx-Ex-vSA"/>
+                            <constraint firstItem="r4o-TK-TOU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="f32-0f-UJh"/>
+                            <constraint firstItem="r4o-TK-TOU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hVi-Mh-XdL"/>
                             <constraint firstItem="I6n-Yh-dAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ve2-zt-ITH"/>
-                            <constraint firstItem="I6n-Yh-dAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="zOA-dj-9gI"/>
+                            <constraint firstItem="I6n-Yh-dAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="214" id="zOA-dj-9gI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oey-JF-3cF"/>
@@ -86,11 +102,27 @@
                                     <action selector="splashButton:" destination="FQ2-iV-eeV" eventType="touchUpInside" id="1Pz-xU-KpX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traps and Treasures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80J-lZ-kFm">
+                                <rect key="frame" x="88.5" y="114" width="198" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Alex, Makeila, and Justin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-mL-btO">
+                                <rect key="frame" x="76.5" y="546" width="222.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WD4-mL-btO" firstAttribute="centerX" secondItem="qr3-vx-rSb" secondAttribute="centerX" id="EoP-lz-C09"/>
+                            <constraint firstItem="80J-lZ-kFm" firstAttribute="top" secondItem="Fcu-q8-F34" secondAttribute="bottom" constant="50" id="Etn-lm-EP6"/>
+                            <constraint firstItem="80J-lZ-kFm" firstAttribute="centerX" secondItem="qr3-vx-rSb" secondAttribute="centerX" id="RMU-Xg-MMR"/>
                             <constraint firstItem="GQb-kH-APf" firstAttribute="centerY" secondItem="qr3-vx-rSb" secondAttribute="centerY" id="Xxb-jC-AGS"/>
                             <constraint firstItem="GQb-kH-APf" firstAttribute="centerX" secondItem="qr3-vx-rSb" secondAttribute="centerX" id="gG2-uy-bzV"/>
+                            <constraint firstItem="O94-cX-0Yx" firstAttribute="top" secondItem="WD4-mL-btO" secondAttribute="bottom" constant="100" id="vUl-1p-yBt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Zy-rN-dGl"/>
@@ -142,7 +174,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-Yx-Chj">
-                                <rect key="frame" x="87" y="115" width="200" height="100"/>
+                                <rect key="frame" x="87" y="159" width="200" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
