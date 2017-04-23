@@ -40,7 +40,7 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
 
     //MARK: Actions
     @IBAction func setUsername(_ sender: UIButton) {
-        playerNameLabel.text = "Enter your username"
+        playerNameLabel.text = "Welcome, \(String(describing: nameTextField.text!))!"
     }
     
 }

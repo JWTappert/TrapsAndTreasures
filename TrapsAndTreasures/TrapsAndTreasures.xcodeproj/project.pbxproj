@@ -114,6 +114,7 @@
 				TargetAttributes = {
 					D06074A31EA856BF0072833D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5RAB5T5U95;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -284,9 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5RAB5T5U95;
 				INFOPLIST_FILE = TrapsAndTreasures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osucascades.cs496.TrapsAndTreasures;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.osucascades.cs496.TrapsAndTreasures-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -296,9 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5RAB5T5U95;
 				INFOPLIST_FILE = TrapsAndTreasures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.osucascades.cs496.TrapsAndTreasures;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.osucascades.cs496.TrapsAndTreasures-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
