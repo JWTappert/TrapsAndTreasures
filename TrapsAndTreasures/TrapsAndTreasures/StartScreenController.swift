@@ -9,6 +9,11 @@
 import UIKit
 
 class StartScreenController: UIViewController {
+    
+    //MARK: Properties
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var playerNameLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,7 @@ class StartScreenController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    //MARK: Actions
+    
 }
 

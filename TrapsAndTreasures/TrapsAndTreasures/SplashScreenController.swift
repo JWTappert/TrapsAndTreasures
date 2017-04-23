@@ -10,6 +10,10 @@ import UIKit
 
 class SplashScreenController: UIViewController {
     
+    //MARK: Properties
+    @IBOutlet weak var splashScreenButton: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,4 +23,7 @@ class SplashScreenController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: Actions
+    
 }

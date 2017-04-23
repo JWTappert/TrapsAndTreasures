@@ -58,6 +58,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oey-JF-3cF"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="nQ1-0U-oCv" id="KZQ-L9-7fb"/>
+                        <outlet property="playerNameLabel" destination="Odv-Iy-cyG" id="CV9-Td-V4G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,6 +78,16 @@
                     <view key="view" contentMode="scaleToFill" id="qr3-vx-rSb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tnt.png" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-ye-5qk">
+                                <rect key="frame" x="32" y="196" width="310" height="275"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Zy-rN-dGl"/>
@@ -94,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-A9-oq7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-A9-oq7">
                                 <rect key="frame" x="87" y="439" width="200" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -103,7 +117,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-e8-Dig">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-e8-Dig">
                                 <rect key="frame" x="87" y="331" width="200" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -112,7 +126,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-uK-f4G">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-uK-f4G">
                                 <rect key="frame" x="87" y="223" width="200" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -121,7 +135,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-Yx-Chj">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-Yx-Chj">
                                 <rect key="frame" x="87" y="115" width="200" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -144,8 +158,10 @@
                         <constraints>
                             <constraint firstItem="5Tw-uK-f4G" firstAttribute="top" secondItem="tLK-Yx-Chj" secondAttribute="bottom" constant="8" id="06d-Ks-ccH"/>
                             <constraint firstItem="Bgf-e8-Dig" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="7DV-sD-b3s"/>
+                            <constraint firstItem="dPx-A9-oq7" firstAttribute="top" secondItem="M6H-xp-6R1" secondAttribute="top" constant="439" id="AYD-38-6Y3"/>
                             <constraint firstAttribute="bottom" secondItem="6Fv-Uk-c6D" secondAttribute="bottom" constant="20" symbolic="YES" id="Jsx-cC-0rB"/>
                             <constraint firstItem="tLK-Yx-Chj" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="QEs-5G-N0R"/>
+                            <constraint firstItem="tLK-Yx-Chj" firstAttribute="top" secondItem="vVP-gA-jmk" secondAttribute="bottom" constant="95" id="R57-3H-L5n"/>
                             <constraint firstItem="6Fv-Uk-c6D" firstAttribute="trailing" secondItem="dPx-A9-oq7" secondAttribute="trailing" id="SDg-mJ-O9M"/>
                             <constraint firstItem="6Fv-Uk-c6D" firstAttribute="top" secondItem="dPx-A9-oq7" secondAttribute="bottom" constant="8" symbolic="YES" id="a5m-sF-hom"/>
                             <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="5Tw-uK-f4G" secondAttribute="leading" id="c8S-vK-gbp"/>
@@ -157,8 +173,10 @@
                             <constraint firstItem="6Fv-Uk-c6D" firstAttribute="top" secondItem="dPx-A9-oq7" secondAttribute="bottom" constant="8" id="hGr-Wg-3E6"/>
                             <constraint firstItem="5Tw-uK-f4G" firstAttribute="centerX" secondItem="M6H-xp-6R1" secondAttribute="centerX" id="j9i-w1-Xn7"/>
                             <constraint firstItem="6Fv-Uk-c6D" firstAttribute="top" secondItem="M6H-xp-6R1" secondAttribute="top" constant="547" id="qHV-5P-7XU"/>
+                            <constraint firstItem="Bgf-e8-Dig" firstAttribute="top" secondItem="M6H-xp-6R1" secondAttribute="top" constant="331" id="s44-52-4RC"/>
                             <constraint firstItem="Bgf-e8-Dig" firstAttribute="top" secondItem="5Tw-uK-f4G" secondAttribute="bottom" constant="8" id="tj3-lr-VkS"/>
                             <constraint firstItem="6Fv-Uk-c6D" firstAttribute="leading" secondItem="M6H-xp-6R1" secondAttribute="leadingMargin" constant="71" id="ydj-Vd-EHe"/>
+                            <constraint firstItem="5Tw-uK-f4G" firstAttribute="top" secondItem="M6H-xp-6R1" secondAttribute="top" constant="223" id="zMX-rw-PRr"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -188,4 +206,7 @@
             <point key="canvasLocation" x="-1102" y="567"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tnt.png" width="223" height="230"/>
+    </resources>
 </document>
