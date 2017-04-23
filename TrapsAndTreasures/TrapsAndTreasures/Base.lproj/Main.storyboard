@@ -22,41 +22,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-Iy-cyG">
-                                <rect key="frame" x="108" y="74" width="159" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-HP-zLj">
-                                <rect key="frame" x="157" y="462" width="62" height="30"/>
-                                <state key="normal" title="Continue"/>
-                                <connections>
-                                    <segue destination="gEh-om-1Vp" kind="show" id="uF0-vv-Iok"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="it better be good..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nQ1-0U-oCv">
-                                <rect key="frame" x="117" y="114" width="141.5" height="30"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="I6n-Yh-dAG">
+                                <rect key="frame" x="16" y="40" width="343" height="110.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-Iy-cyG">
+                                        <rect key="frame" x="92" y="0.0" width="159" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="it better be good..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nQ1-0U-oCv">
+                                        <rect key="frame" x="0.0" y="35.5" width="343" height="30"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-HP-zLj">
+                                        <rect key="frame" x="140.5" y="80.5" width="62" height="30"/>
+                                        <state key="normal" title="Continue"/>
+                                        <connections>
+                                            <segue destination="gEh-om-1Vp" kind="show" id="uF0-vv-Iok"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nQ1-0U-oCv" secondAttribute="trailing" id="m36-fD-msW"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Odv-Iy-cyG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ULi-ve-Uqz"/>
-                            <constraint firstItem="Odv-Iy-cyG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="aMl-4y-joB"/>
-                            <constraint firstItem="nQ1-0U-oCv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eGq-DM-qkV"/>
-                            <constraint firstItem="nQ1-0U-oCv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="lIm-YE-9Aj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tAD-HP-zLj" secondAttribute="bottom" constant="175" id="lo7-Z7-gkd"/>
-                            <constraint firstItem="tAD-HP-zLj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyc-fP-p5W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I6n-Yh-dAG" secondAttribute="trailing" id="aKx-Ex-vSA"/>
+                            <constraint firstItem="I6n-Yh-dAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ve2-zt-ITH"/>
+                            <constraint firstItem="I6n-Yh-dAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="zOA-dj-9gI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oey-JF-3cF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437.60000000000002" y="115.59220389805098"/>
+            <point key="canvasLocation" x="609" y="567"/>
+        </scene>
+        <!--Splash Screen Controller-->
+        <scene sceneID="prH-xK-e6v">
+            <objects>
+                <viewController id="FQ2-iV-eeV" userLabel="Splash Screen Controller" customClass="SplashScreenController" customModule="TrapsAndTreasures" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fcu-q8-F34"/>
+                        <viewControllerLayoutGuide type="bottom" id="O94-cX-0Yx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qr3-vx-rSb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Zy-rN-dGl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iml-X1-xpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.40000000000001" y="567.16641679160421"/>
         </scene>
         <!--Gameplay Controller-->
         <scene sceneID="HRs-MS-SZy">
@@ -145,7 +169,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1228" y="115.59220389805098"/>
+            <point key="canvasLocation" x="1559" y="567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ORf-OI-q93">
@@ -156,12 +180,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0dM-Pg-ud4"/>
+                        <segue destination="FQ2-iV-eeV" kind="relationship" relationship="rootViewController" id="lGJ-F1-asA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNE-7z-0mB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-380" y="116"/>
+            <point key="canvasLocation" x="-1102" y="567"/>
         </scene>
     </scenes>
 </document>

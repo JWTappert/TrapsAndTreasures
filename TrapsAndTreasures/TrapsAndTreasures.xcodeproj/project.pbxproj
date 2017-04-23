@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D018626C1EAC3E0C005F6409 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */; };
+		D01862701EAC433B005F6409 /* tnt.png in Resources */ = {isa = PBXBuildFile; fileRef = D018626F1EAC433B005F6409 /* tnt.png */; };
 		D0547BA71EA955F5007847F9 /* GameplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BA61EA955F5007847F9 /* GameplayController.swift */; };
 		D0547BA91EA95C75007847F9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BA81EA95C75007847F9 /* Player.swift */; };
 		D0547BAB1EA95D5B007847F9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BAA1EA95D5B007847F9 /* PlayerView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
+		D018626F1EAC433B005F6409 /* tnt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tnt.png; path = ../tnt.png; sourceTree = "<group>"; };
 		D0547BA61EA955F5007847F9 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
 		D0547BA81EA95C75007847F9 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D0547BAA1EA95D5B007847F9 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 		D060749B1EA856BF0072833D = {
 			isa = PBXGroup;
 			children = (
+				D018626F1EAC433B005F6409 /* tnt.png */,
 				D06074A61EA856BF0072833D /* TrapsAndTreasures */,
 				D06074A51EA856BF0072833D /* Products */,
 			);
@@ -72,6 +77,7 @@
 				D0547BA81EA95C75007847F9 /* Player.swift */,
 				D0547BAA1EA95D5B007847F9 /* PlayerView.swift */,
 				D0547BAC1EA96439007847F9 /* BoardView.swift */,
+				D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */,
 			);
 			path = TrapsAndTreasures;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01862701EAC433B005F6409 /* tnt.png in Resources */,
 				D06074B21EA856BF0072833D /* LaunchScreen.storyboard in Resources */,
 				D06074AF1EA856BF0072833D /* Assets.xcassets in Resources */,
 				D06074AD1EA856BF0072833D /* Main.storyboard in Resources */,
@@ -152,6 +159,7 @@
 				D06074AA1EA856BF0072833D /* StartScreenController.swift in Sources */,
 				D0547BA71EA955F5007847F9 /* GameplayController.swift in Sources */,
 				D0547BAD1EA96439007847F9 /* BoardView.swift in Sources */,
+				D018626C1EAC3E0C005F6409 /* SplashScreenController.swift in Sources */,
 				D0547BAB1EA95D5B007847F9 /* PlayerView.swift in Sources */,
 				D06074A81EA856BF0072833D /* AppDelegate.swift in Sources */,
 			);
