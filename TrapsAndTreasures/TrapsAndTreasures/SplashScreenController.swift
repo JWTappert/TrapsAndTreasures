@@ -11,8 +11,6 @@ import UIKit
 class SplashScreenController: UIViewController {
     
     //MARK: Properties
-    @IBOutlet weak var splashScreenButton: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +23,8 @@ class SplashScreenController: UIViewController {
     }
     
     //MARK: Actions
+    @IBAction func splashButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "splashSegue", sender: nil)
+    }
     
 }

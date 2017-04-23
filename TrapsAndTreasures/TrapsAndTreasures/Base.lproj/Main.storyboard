@@ -79,18 +79,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tnt.png" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-ye-5qk">
-                                <rect key="frame" x="32" y="196" width="310" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQb-kH-APf">
+                                <rect key="frame" x="75.5" y="218.5" width="223" height="230"/>
+                                <state key="normal" backgroundImage="tnt.png"/>
+                                <connections>
+                                    <action selector="splashButton:" destination="FQ2-iV-eeV" eventType="touchUpInside" id="1Pz-xU-KpX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GQb-kH-APf" firstAttribute="centerY" secondItem="qr3-vx-rSb" secondAttribute="centerY" id="Xxb-jC-AGS"/>
+                            <constraint firstItem="GQb-kH-APf" firstAttribute="centerX" secondItem="qr3-vx-rSb" secondAttribute="centerX" id="gG2-uy-bzV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Zy-rN-dGl"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="splashSegue" id="vdJ-8M-Y0D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iml-X1-xpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
