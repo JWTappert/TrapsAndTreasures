@@ -37,15 +37,15 @@ class GameplayController: UIViewController {
         super.viewDidLoad()
         
         //give text to labels
-        trapsHeldLabel.text = "Traps Held"
-        totalStepsHeld.text = "110 Steps"
+        //trapsHeldLabel.text = "Traps Held"
+        //totalStepsHeld.text = "110 Steps"
         player = Player()
         // Do any additional setup after loading the view, typically from a nib.
     
         
         //possibly useless
         //give tiles a tap function
-        tap.addTarget(self, action:"tileTapped")
+        //tap.addTarget(self, action:"tileTapped")
         
         //add gesture to tiles
         tile1?.addGestureRecognizer(tap)
