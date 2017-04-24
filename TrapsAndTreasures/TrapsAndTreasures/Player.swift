@@ -11,20 +11,30 @@ import UIKit
 class Player{
     let name: String
     var totalMovementPoints: Int
+    let view: UIView?
     
     init(){
         self.name = "Bob"
         self.totalMovementPoints = 0
+        self.view = nil
     }
     
     init(name: String){
         self.name = name
         self.totalMovementPoints = 0
+        self.view = nil
+    }
+    
+    init(view: UIView){
+        self.name = "Bob"
+        self.totalMovementPoints = 0
+        self.view = view
     }
     
     func move(){
         self.totalMovementPoints -= 1;
             
     }
+    
     
 }
