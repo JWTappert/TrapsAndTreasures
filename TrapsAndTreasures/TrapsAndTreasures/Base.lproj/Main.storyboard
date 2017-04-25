@@ -77,6 +77,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="nQ1-0U-oCv" id="KZQ-L9-7fb"/>
                         <outlet property="playerNameLabel" destination="Odv-Iy-cyG" id="CV9-Td-V4G"/>
+                        <outlet property="startButton" destination="7UL-FN-sdr" id="3Xo-IK-lXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
