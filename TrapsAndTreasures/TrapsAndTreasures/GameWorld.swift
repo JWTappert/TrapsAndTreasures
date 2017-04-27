@@ -1,5 +1,5 @@
 //
-//  PlayerView.swift
+//  GameWorld.swift
 //  TrapsAndTreasures
 //
 //  Created by Justin Tappert on 4/20/17.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PlayerView: UIView{
-
-    
-    
+class GameWorld: UIViewController {
+    let name: String = ""
+    @IBOutlet var tiles: [UIView]!
 }

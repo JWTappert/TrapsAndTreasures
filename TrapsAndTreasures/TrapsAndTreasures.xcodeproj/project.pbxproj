@@ -10,10 +10,10 @@
 		D018626C1EAC3E0C005F6409 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */; };
 		D01862701EAC433B005F6409 /* tnt.png in Resources */ = {isa = PBXBuildFile; fileRef = D018626F1EAC433B005F6409 /* tnt.png */; };
 		D01862721EADC858005F6409 /* sunnys.png in Resources */ = {isa = PBXBuildFile; fileRef = D01862711EADC858005F6409 /* sunnys.png */; };
+		D01ECF7E1EB28782000D7D84 /* GameWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF7D1EB28782000D7D84 /* GameWorld.swift */; };
+		D01ECF801EB288EB000D7D84 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF7F1EB288EB000D7D84 /* Tile.swift */; };
 		D0547BA71EA955F5007847F9 /* GameplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BA61EA955F5007847F9 /* GameplayController.swift */; };
 		D0547BA91EA95C75007847F9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BA81EA95C75007847F9 /* Player.swift */; };
-		D0547BAB1EA95D5B007847F9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BAA1EA95D5B007847F9 /* PlayerView.swift */; };
-		D0547BAD1EA96439007847F9 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BAC1EA96439007847F9 /* BoardView.swift */; };
 		D06074A81EA856BF0072833D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06074A71EA856BF0072833D /* AppDelegate.swift */; };
 		D06074AA1EA856BF0072833D /* StartScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06074A91EA856BF0072833D /* StartScreenController.swift */; };
 		D06074AD1EA856BF0072833D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06074AB1EA856BF0072833D /* Main.storyboard */; };
@@ -25,10 +25,10 @@
 		D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		D018626F1EAC433B005F6409 /* tnt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tnt.png; path = ../tnt.png; sourceTree = "<group>"; };
 		D01862711EADC858005F6409 /* sunnys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sunnys.png; path = ../sunnys.png; sourceTree = "<group>"; };
+		D01ECF7D1EB28782000D7D84 /* GameWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameWorld.swift; sourceTree = "<group>"; };
+		D01ECF7F1EB288EB000D7D84 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		D0547BA61EA955F5007847F9 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
 		D0547BA81EA95C75007847F9 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		D0547BAA1EA95D5B007847F9 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		D0547BAC1EA96439007847F9 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		D06074A41EA856BF0072833D /* TrapsAndTreasures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrapsAndTreasures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06074A71EA856BF0072833D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D06074A91EA856BF0072833D /* StartScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenController.swift; sourceTree = "<group>"; };
@@ -72,15 +72,15 @@
 			children = (
 				D06074A71EA856BF0072833D /* AppDelegate.swift */,
 				D06074A91EA856BF0072833D /* StartScreenController.swift */,
+				D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */,
 				D0547BA61EA955F5007847F9 /* GameplayController.swift */,
+				D01ECF7D1EB28782000D7D84 /* GameWorld.swift */,
+				D01ECF7F1EB288EB000D7D84 /* Tile.swift */,
+				D0547BA81EA95C75007847F9 /* Player.swift */,
 				D06074AB1EA856BF0072833D /* Main.storyboard */,
 				D06074AE1EA856BF0072833D /* Assets.xcassets */,
 				D06074B01EA856BF0072833D /* LaunchScreen.storyboard */,
 				D06074B31EA856BF0072833D /* Info.plist */,
-				D0547BA81EA95C75007847F9 /* Player.swift */,
-				D0547BAA1EA95D5B007847F9 /* PlayerView.swift */,
-				D0547BAC1EA96439007847F9 /* BoardView.swift */,
-				D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */,
 			);
 			path = TrapsAndTreasures;
 			sourceTree = "<group>";
@@ -163,9 +163,9 @@
 				D0547BA91EA95C75007847F9 /* Player.swift in Sources */,
 				D06074AA1EA856BF0072833D /* StartScreenController.swift in Sources */,
 				D0547BA71EA955F5007847F9 /* GameplayController.swift in Sources */,
-				D0547BAD1EA96439007847F9 /* BoardView.swift in Sources */,
+				D01ECF801EB288EB000D7D84 /* Tile.swift in Sources */,
 				D018626C1EAC3E0C005F6409 /* SplashScreenController.swift in Sources */,
-				D0547BAB1EA95D5B007847F9 /* PlayerView.swift in Sources */,
+				D01ECF7E1EB28782000D7D84 /* GameWorld.swift in Sources */,
 				D06074A81EA856BF0072833D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
