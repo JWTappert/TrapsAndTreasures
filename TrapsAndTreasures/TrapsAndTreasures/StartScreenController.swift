@@ -11,11 +11,13 @@ import UIKit
 class StartScreenController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
+    let defaults = UserDefaults.standard
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     var name: String = ""
-    let alert = UIAlertController(title: "Insert Name", message: "Please enter a name before proceeding", preferredStyle: .alert)
+    let noNameAlert = UIAlertController(title: "Insert Name", message: "Please enter a name before proceeding", preferredStyle: .alert)
+    let nameSavedAlert = UIAlertController(title: "Name Saved", message: "Your username has been saved", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +30,16 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
             (result : UIAlertAction) -> Void in
             print("OK")
         }
-        alert.addAction(action)
+        noNameAlert.addAction(action)
+        nameSavedAlert.addAction(action)
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+    
     
     //MARK: UITextFieldDelagate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -43,10 +48,11 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let name = nameTextField.text {
             if (name.isEmpty || name == " ") {
-                present(alert, animated: true, completion: nil)
+                present(noNameAlert, animated: true, completion: nil)
                 return
             } else {
                 self.name = name
@@ -55,6 +61,7 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if (nameTextField.text!.isEmpty){
@@ -65,9 +72,11 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     //MARK: Actions
     @IBAction func setUsername(_ sender: UIButton) {
-        playerNameLabel.text = "Welcome, \(String(describing: nameTextField.text!))!"
+        defaults.set(name, forKey: "playerName")
+        present(nameSavedAlert, animated: true, completion: nil)
     }
     
 }
