@@ -60,7 +60,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="gEh-om-1Vp" kind="show" id="a3c-Bz-CMZ"/>
+                                    <segue destination="gEh-om-1Vp" kind="show" id="UEY-hk-Iv9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -268,13 +268,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-hG-HZD">
+                                <rect key="frame" x="260" y="335" width="81" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="GET STEPS"/>
+                                <connections>
+                                    <action selector="incrementMoves:" destination="gEh-om-1Vp" eventType="touchUpInside" id="Qt7-8z-tyi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="playerAvatar" destination="uMw-gn-ZOh" id="MwI-Ww-EzR"/>
                         <outlet property="playerMovesLabel" destination="MmC-sF-4Eq" id="WGT-1k-edm"/>
-                        <outlet property="trapsHeldLabel" destination="zSM-7r-rfi" id="1du-dK-Vo6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcU-uy-4Qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,11 +291,7 @@
                         <action selector="playerTapped:" destination="gEh-om-1Vp" id="4qb-cV-YaS"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="bYg-If-SWf" userLabel="Tile 2 Tap Recognizer">
-                    <connections>
-                        <action selector="tileTapped:" destination="gEh-om-1Vp" id="XlR-xP-FcA"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bYg-If-SWf" userLabel="Tile 2 Tap Recognizer"/>
                 <tapGestureRecognizer id="ccT-rP-yRk" userLabel="Tile 3 Tap Recognizer"/>
                 <tapGestureRecognizer id="2tO-vC-jci" userLabel="Tile 4 Tap Recognizer"/>
                 <tapGestureRecognizer id="eyO-cT-QNe" userLabel="Tile 5 Tap Recognizer"/>

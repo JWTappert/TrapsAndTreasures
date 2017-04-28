@@ -11,12 +11,14 @@ import UIKit
 class GameplayController: UIViewController {
     
     //MARK: Attributes
+    let defaults = UserDefaults.standard
+    var clicks = 10
     @IBOutlet weak var playerMovesLabel: UILabel!
     @IBOutlet weak var playerAvatar: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playerMovesLabel.text = defaults.string(forKey: "playerMovesCount")
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +30,10 @@ class GameplayController: UIViewController {
     //goes with addgesture and isuserenabled stuff
     @IBAction func playerTapped(_ sender: Any) {
         
+    }
+    @IBAction func incrementMoves(_ sender: UIButton) {
+        clicks += 1
+        defaults.set(clicks, forKey: "playerMovesCount")
     }
     
 }
