@@ -15,13 +15,20 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     var name: String = ""
-    let alert: UIAlertController = UIAlertController(title: "Name Required", message: "Please enter a name", preferredStyle: .alert)
+    let alert = UIAlertController(title: "Insert Name", message: "Please enter a name before proceeding", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.isEnabled = false
         // handle the text fields user input through delagate callbacks
         nameTextField.delegate = self
+        
+        //alert handling
+        let action = UIAlertAction(title: "OK", style: .default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+        }
+        alert.addAction(action)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,13 +44,15 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let name = playerNameLabel.text {
-            if !name.isEmpty {
+        if let name = nameTextField.text {
+            if (name.isEmpty || name == " ") {
+                present(alert, animated: true, completion: nil)
+                return
+            } else {
+                self.name = name
+                playerNameLabel.text = "Welcome, \(name)!"
                 startButton.isEnabled = true
-                //self.presentedViewController(alert, animated: true, completion: nil)
             }
-            self.name = name
-            playerNameLabel.text = "Welcome, \(name)!"
         }
     }
     

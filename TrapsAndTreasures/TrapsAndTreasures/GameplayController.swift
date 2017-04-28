@@ -10,29 +10,15 @@ import UIKit
 
 class GameplayController: UIViewController {
     
-    //player
-    var player: Player?
-    
-    //tap variable
-    let tap = UITapGestureRecognizer()
-    
-    //uiview variables to control gestures
-    //and placements
-    @IBOutlet var playerAvatar: UIView?
-    
-    //label variables to assign text and such
-    @IBOutlet weak var trapsHeldLabel: UILabel!
-    @IBOutlet weak var totalStepsHeld: UILabel!
-    
-    
+    //MARK: Attributes
+    @IBOutlet weak var playerMovesLabel: UILabel!
+    @IBOutlet weak var playerAvatar: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,12 +30,5 @@ class GameplayController: UIViewController {
         
     }
     
-    //for when tile is tapped
-    //currently ONLY tile2 recognizer is linked to this
-    @IBAction func tileTapped(_ sender: AnyObject){
-        //tile tapped is given as sender
-        //center player on tile tapped
-        playerAvatar?.center = sender.center
-    }
 }
 
