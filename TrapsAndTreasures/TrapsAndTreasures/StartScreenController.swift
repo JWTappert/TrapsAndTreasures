@@ -32,6 +32,11 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
         }
         noNameAlert.addAction(action)
         nameSavedAlert.addAction(action)
+        
+        //if user is returning
+        if let username = defaults.data(forKey: "playerName") {
+            playerNameLabel.text = "Welcome, \(username)"
+        }
     }
 
     
