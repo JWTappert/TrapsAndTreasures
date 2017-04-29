@@ -12,6 +12,8 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
     let defaults = UserDefaults.standard
+    let playerMoveCountKey = "playerMoveCount"
+    var existingPlayerMoveCount: Int?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
@@ -38,11 +40,17 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
             playerNameLabel.text = "Welcome back, \(username)"
         }
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    func loadGameState() {
+        // load players move count if it exists
+        if let playerMoveCount = defaults.object(forKey: playerMoveCountKey) as? Int {
+            existingPlayerMoveCount = playerMoveCount
+        }
     }
     
     

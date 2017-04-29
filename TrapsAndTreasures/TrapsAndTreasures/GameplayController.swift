@@ -11,29 +11,59 @@ import UIKit
 class GameplayController: UIViewController {
     
     //MARK: Attributes
-    let defaults = UserDefaults.standard
-    var clicks = 10
     @IBOutlet weak var playerMovesLabel: UILabel!
     @IBOutlet weak var playerAvatar: UILabel!
+    let defaults = UserDefaults.standard
+    let playerMovesCountKey = "playerMovesCount"
+    var playerMovesCount: Int?
+    var count = 0
     
+    //MARK: Load Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        playerMovesLabel.text = defaults.string(forKey: "playerMovesCount")
-    }
+        loadGameWorld()
 
+    }
+    
+    // runs everytime the view is about to load
+    override func viewWillAppear(_ animated: Bool) {
+        updateInterface()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("saving values")
+        defaults.set(playerMovesCount, forKey: playerMovesCountKey)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    private func updateInterface(){
+        print("updating interface")
+        playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
+    }
+    
+    private func loadGameWorld(){
+        print("loading gameworld")
+        // load players move count if it exists
+        if let moveCount = defaults.object(forKey: playerMovesCountKey) as? Int {
+            playerMovesCount = moveCount
+            print("moves existed, its value was: \(String(describing: playerMovesCount!))")
+        } else {
+            playerMovesCount = 0
+        }
+    }
     
     //goes with addgesture and isuserenabled stuff
     @IBAction func playerTapped(_ sender: Any) {
         
     }
+    
     @IBAction func incrementMoves(_ sender: UIButton) {
-        clicks += 1
-        defaults.set(clicks, forKey: "playerMovesCount")
+        playerMovesCount! += 1
+        playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
     }
     
 }
