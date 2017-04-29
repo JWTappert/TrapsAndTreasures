@@ -17,12 +17,12 @@ class GameplayController: UIViewController {
     let playerMovesCountKey = "playerMovesCount"
     var playerMovesCount: Int?
     var count = 0
+    var gameWorld: GameWorld?
     
     //MARK: Load Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadGameWorld()
-
+        gameWorld = GameWorld()
     }
     
     // runs everytime the view is about to load
@@ -42,18 +42,12 @@ class GameplayController: UIViewController {
     
     private func updateInterface(){
         print("updating interface")
-        playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
-    }
-    
-    private func loadGameWorld(){
-        print("loading gameworld")
         // load players move count if it exists
         if let moveCount = defaults.object(forKey: playerMovesCountKey) as? Int {
             playerMovesCount = moveCount
             print("moves existed, its value was: \(String(describing: playerMovesCount!))")
-        } else {
-            playerMovesCount = 0
         }
+        playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
     }
     
     //goes with addgesture and isuserenabled stuff
