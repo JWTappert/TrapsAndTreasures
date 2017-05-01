@@ -157,9 +157,6 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bYg-If-SWf" appends="YES" id="URO-fN-D6a"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-e8-Dig" userLabel="Tile 3">
                                 <rect key="frame" x="137" y="331" width="100" height="100"/>
@@ -171,9 +168,6 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ccT-rP-yRk" appends="YES" id="51p-0W-by3"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-uK-f4G" userLabel="Tile 4">
                                 <rect key="frame" x="137" y="223" width="100" height="100"/>
@@ -185,9 +179,6 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2tO-vC-jci" appends="YES" id="P4A-wU-FvA"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-Yx-Chj" userLabel="Tile 5">
                                 <rect key="frame" x="137" y="115" width="100" height="100"/>
@@ -199,17 +190,15 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="eyO-cT-QNe" appends="YES" id="NIi-xp-PY0"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fv-Uk-c6D" userLabel="Tile 1">
                                 <rect key="frame" x="137" y="547" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-gn-ZOh">
+                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-gn-ZOh">
                                         <rect key="frame" x="25" y="24" width="50" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                         <attributedString key="attributedText">
                                             <fragment content="😎">
                                                 <attributes>
@@ -219,9 +208,13 @@
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="JCc-SK-RCl" appends="YES" id="GvX-ap-Hwf"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
@@ -283,18 +276,16 @@
                     <connections>
                         <outlet property="playerAvatar" destination="uMw-gn-ZOh" id="MwI-Ww-EzR"/>
                         <outlet property="playerMovesLabel" destination="MmC-sF-4Eq" id="WGT-1k-edm"/>
+                        <outlet property="tile0" destination="6Fv-Uk-c6D" id="Qyy-yI-dS2"/>
+                        <outlet property="tile1" destination="dPx-A9-oq7" id="DMl-5E-bei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcU-uy-4Qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Agu-da-yDr">
+                <tapGestureRecognizer id="JCc-SK-RCl">
                     <connections>
-                        <action selector="playerTapped:" destination="gEh-om-1Vp" id="4qb-cV-YaS"/>
+                        <action selector="playerTapped:" destination="gEh-om-1Vp" id="fNg-ru-IYK"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="bYg-If-SWf" userLabel="Tile 2 Tap Recognizer"/>
-                <tapGestureRecognizer id="ccT-rP-yRk" userLabel="Tile 3 Tap Recognizer"/>
-                <tapGestureRecognizer id="2tO-vC-jci" userLabel="Tile 4 Tap Recognizer"/>
-                <tapGestureRecognizer id="eyO-cT-QNe" userLabel="Tile 5 Tap Recognizer"/>
             </objects>
             <point key="canvasLocation" x="1512.8" y="566.26686656671666"/>
         </scene>

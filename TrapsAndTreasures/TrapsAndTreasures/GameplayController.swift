@@ -13,6 +13,11 @@ class GameplayController: UIViewController {
     //MARK: Attributes
     @IBOutlet weak var playerMovesLabel: UILabel!
     @IBOutlet weak var playerAvatar: UILabel!
+    
+    @IBOutlet weak var tile0: UIView!
+    @IBOutlet weak var tile1: UIView!
+    
+    
     let defaults = UserDefaults.standard
     let playerMovesCountKey = "playerMovesCount"
     var playerMovesCount: Int?
@@ -54,7 +59,11 @@ class GameplayController: UIViewController {
     
     //goes with addgesture and isuserenabled stuff
     @IBAction func playerTapped(_ sender: Any) {
-        
+        print("player tapped")
+        playerAvatar.center = tile1.center
+        playerMovesCount = playerMovesCount! - 1
+        tile1.bringSubview(toFront: playerAvatar)
+        playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
     }
     
     @IBAction func incrementMoves(_ sender: UIButton) {

@@ -32,10 +32,14 @@ class StartScreenController: UIViewController, UITextFieldDelegate {
         }
         noNameAlert.addAction(action)
         nameSavedAlert.addAction(action)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         //if user is returning
         if let username = defaults.string(forKey: "playerName") {
             playerNameLabel.text = "Welcome back, \(username)"
+            nameTextField.text = "\(username)"
+            startButton.isEnabled = true
         }
     }
 
