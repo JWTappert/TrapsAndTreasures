@@ -14,20 +14,26 @@ class GameplayController: UIViewController {
     @IBOutlet weak var playerMovesLabel: UILabel!
     @IBOutlet weak var playerAvatar: UILabel!
     
-    @IBOutlet weak var tile0: UIView!
-    @IBOutlet weak var tile1: UIView!
+    @IBOutlet var tiles: [UIView]!
     
-    
+    var index = 0
     let defaults = UserDefaults.standard
     let playerMovesCountKey = "playerMovesCount"
     var playerMovesCount: Int?
     var count = 0
     var gameWorld: GameWorld?
     
+    let noMovesAlert = UIAlertController(title: "Out of Moves", message: "Click the get moves button to get more moves", preferredStyle: .alert)
+    
     //MARK: Load Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         gameWorld = GameWorld()
+        let action = UIAlertAction(title: "OK", style: .default) {
+            (result : UIAlertAction) -> Void in
+            print("OK")
+        }
+        noMovesAlert.addAction(action)
     }
     
     // runs everytime the view is about to load
@@ -55,18 +61,34 @@ class GameplayController: UIViewController {
             playerMovesCount = 0
         }
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
+        
+        if let playerIndex = defaults.object(forKey: "playerIndex") as? Int {
+            index = playerIndex
+            print("got index: \(index)")
+            tiles[index].addSubview(playerAvatar)
+            playerAvatar.bringSubview(toFront: tiles[index])
+        }
     }
     
     //goes with addgesture and isuserenabled stuff
     @IBAction func playerTapped(_ sender: Any) {
+        if playerMovesCount! <= 0 {
+            present(noMovesAlert, animated: true, completion: nil)
+            return
+        }
+        
         print("player tapped")
-        
-        tile1.addSubview(playerAvatar)
-        playerAvatar.bringSubview(toFront: tile1)
-
-        
+        print(index )
+        if index >= tiles.count {
+            index = 0
+        }
+        tiles[index].addSubview(playerAvatar)
+        playerAvatar.bringSubview(toFront: tiles[index])
+        index = index + 1
         playerMovesCount = playerMovesCount! - 1
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
+        
+        defaults.set(index, forKey: "playerIndex")
     }
     
     @IBAction func incrementMoves(_ sender: UIButton) {

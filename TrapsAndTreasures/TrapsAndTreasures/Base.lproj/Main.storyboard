@@ -276,8 +276,11 @@
                     <connections>
                         <outlet property="playerAvatar" destination="uMw-gn-ZOh" id="MwI-Ww-EzR"/>
                         <outlet property="playerMovesLabel" destination="MmC-sF-4Eq" id="WGT-1k-edm"/>
-                        <outlet property="tile0" destination="6Fv-Uk-c6D" id="Qyy-yI-dS2"/>
-                        <outlet property="tile1" destination="dPx-A9-oq7" id="DMl-5E-bei"/>
+                        <outletCollection property="tiles" destination="6Fv-Uk-c6D" collectionClass="NSMutableArray" id="kvK-if-Npu"/>
+                        <outletCollection property="tiles" destination="dPx-A9-oq7" collectionClass="NSMutableArray" id="cYQ-B6-sMr"/>
+                        <outletCollection property="tiles" destination="Bgf-e8-Dig" collectionClass="NSMutableArray" id="6va-lQ-KIV"/>
+                        <outletCollection property="tiles" destination="5Tw-uK-f4G" collectionClass="NSMutableArray" id="fHp-fF-hmB"/>
+                        <outletCollection property="tiles" destination="tLK-Yx-Chj" collectionClass="NSMutableArray" id="PXg-ev-aVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcU-uy-4Qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
