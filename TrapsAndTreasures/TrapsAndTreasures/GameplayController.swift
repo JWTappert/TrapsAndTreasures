@@ -46,6 +46,8 @@ class GameplayController: UIViewController {
         if let moveCount = defaults.object(forKey: playerMovesCountKey) as? Int {
             playerMovesCount = moveCount
             print("moves existed, its value was: \(String(describing: playerMovesCount!))")
+        } else {
+            playerMovesCount = 0
         }
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
     }
