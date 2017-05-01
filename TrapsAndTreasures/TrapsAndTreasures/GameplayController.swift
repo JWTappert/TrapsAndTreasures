@@ -60,9 +60,12 @@ class GameplayController: UIViewController {
     //goes with addgesture and isuserenabled stuff
     @IBAction func playerTapped(_ sender: Any) {
         print("player tapped")
-        playerAvatar.center = tile1.center
+        
+        tile1.addSubview(playerAvatar)
+        playerAvatar.bringSubview(toFront: tile1)
+
+        
         playerMovesCount = playerMovesCount! - 1
-        tile1.bringSubview(toFront: playerAvatar)
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
     }
     
