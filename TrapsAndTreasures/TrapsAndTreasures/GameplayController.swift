@@ -65,9 +65,14 @@ class GameplayController: UIViewController {
         if let playerIndex = defaults.object(forKey: "playerIndex") as? Int {
             index = playerIndex
             print("got index: \(index)")
-            tiles[index].addSubview(playerAvatar)
-            playerAvatar.bringSubview(toFront: tiles[index])
         }
+        
+        if index >= tiles.count {
+            index = 0
+        }
+        
+        tiles[index].addSubview(playerAvatar)
+        playerAvatar.bringSubview(toFront: tiles[index])
     }
     
     //goes with addgesture and isuserenabled stuff
@@ -76,15 +81,18 @@ class GameplayController: UIViewController {
             present(noMovesAlert, animated: true, completion: nil)
             return
         }
-        
+        index = index + 1
         print("player tapped")
-        print(index )
+        print(index)
         if index >= tiles.count {
             index = 0
         }
         tiles[index].addSubview(playerAvatar)
         playerAvatar.bringSubview(toFront: tiles[index])
-        index = index + 1
+        
+        if index >= tiles.count {
+            index = 0
+        }
         playerMovesCount = playerMovesCount! - 1
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
         
