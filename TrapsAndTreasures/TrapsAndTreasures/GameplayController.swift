@@ -13,15 +13,19 @@ class GameplayController: UIViewController {
     //MARK: Attributes
     @IBOutlet weak var playerMovesLabel: UILabel!
     @IBOutlet weak var playerAvatar: UILabel!
+    @IBOutlet weak var playerTrapCountLabel: UILabel!
     
     @IBOutlet var tiles: [UIView]!
     
     var index = 0
     let defaults = UserDefaults.standard
     let playerMovesCountKey = "playerMovesCount"
+    let playerTrapCountKey = "playerTrapCount"
     var playerMovesCount: Int?
+    var playerTrapCount: Int?
     var count = 0
     var gameWorld: GameWorld?
+    var hasTrap = -1
     
     let noMovesAlert = UIAlertController(title: "Out of Moves", message: "Click the get moves button to get more moves", preferredStyle: .alert)
     
@@ -62,6 +66,15 @@ class GameplayController: UIViewController {
         }
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
         
+        if let trapCount = defaults.object(forKey: playerTrapCountKey) as? Int {
+            playerTrapCount = trapCount
+            print("traps existed, its value was: \(String(describing: playerTrapCount!))")
+        } else {
+            playerTrapCount = 1
+        }
+        playerTrapCountLabel.text = "\(String(describing: playerTrapCount))"
+
+        
         if let playerIndex = defaults.object(forKey: "playerIndex") as? Int {
             index = playerIndex
             print("got index: \(index)")
@@ -90,13 +103,30 @@ class GameplayController: UIViewController {
         tiles[index].addSubview(playerAvatar)
         playerAvatar.bringSubview(toFront: tiles[index])
         
-        if index >= tiles.count {
-            index = 0
+        if(hasTrap == index){
+            print("Trap activated. You lose 10 moves")
+            playerMovesCount = playerMovesCount! - 10
+            hasTrap = -1
         }
+        
         playerMovesCount = playerMovesCount! - 1
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
         
+        
         defaults.set(index, forKey: "playerIndex")
+    }
+    @IBAction func dropTrap(_ sender: UILongPressGestureRecognizer) {
+        if playerTrapCount! <= 0 {
+            print("You out of traps, fam")
+        }
+        else if(hasTrap != -1){
+            print("Trap already Placed")
+        }
+        else {
+            playerTrapCount = playerTrapCount! - 1
+        playerTrapCountLabel.text = "\(String(describing: playerTrapCount))"
+        hasTrap = index
+        }
     }
     
     @IBAction func incrementMoves(_ sender: UIButton) {

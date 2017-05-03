@@ -6,13 +6,13 @@ class Player {
     init() {
         name = "jack"
         movementPoints = 0
-        traps = 0
+        traps = 1
     }
     
     init(name: String) {
         self.name = name
         movementPoints = 0
-        traps = 0
+        traps = 1
     }
     
     func move(){
