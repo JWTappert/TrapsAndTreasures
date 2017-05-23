@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25F3A8DC2D137A8915E9C7C6 /* Pods_TrapsAndTreasures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BD88CBED83AC298CD17348 /* Pods_TrapsAndTreasures.framework */; };
 		D018626C1EAC3E0C005F6409 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */; };
 		D01862701EAC433B005F6409 /* tnt.png in Resources */ = {isa = PBXBuildFile; fileRef = D018626F1EAC433B005F6409 /* tnt.png */; };
 		D01862721EADC858005F6409 /* sunnys.png in Resources */ = {isa = PBXBuildFile; fileRef = D01862711EADC858005F6409 /* sunnys.png */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06BD88CBED83AC298CD17348 /* Pods_TrapsAndTreasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrapsAndTreasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E85BE6DCBD842345642553 /* Pods-TrapsAndTreasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrapsAndTreasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrapsAndTreasures/Pods-TrapsAndTreasures.debug.xcconfig"; sourceTree = "<group>"; };
+		9987BE8AB43A92DD3B525BD7 /* Pods-TrapsAndTreasures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrapsAndTreasures.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrapsAndTreasures/Pods-TrapsAndTreasures.release.xcconfig"; sourceTree = "<group>"; };
 		D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		D018626F1EAC433B005F6409 /* tnt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tnt.png; path = ../tnt.png; sourceTree = "<group>"; };
 		D01862711EADC858005F6409 /* sunnys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sunnys.png; path = ../sunnys.png; sourceTree = "<group>"; };
@@ -43,12 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F3A8DC2D137A8915E9C7C6 /* Pods_TrapsAndTreasures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		462127B3AA4AF177B6D0AE6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06BD88CBED83AC298CD17348 /* Pods_TrapsAndTreasures.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0878F7941CCAE27265ACA44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49E85BE6DCBD842345642553 /* Pods-TrapsAndTreasures.debug.xcconfig */,
+				9987BE8AB43A92DD3B525BD7 /* Pods-TrapsAndTreasures.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D060749B1EA856BF0072833D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,8 @@
 				D018626F1EAC433B005F6409 /* tnt.png */,
 				D06074A61EA856BF0072833D /* TrapsAndTreasures */,
 				D06074A51EA856BF0072833D /* Products */,
+				A0878F7941CCAE27265ACA44 /* Pods */,
+				462127B3AA4AF177B6D0AE6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D06074B61EA856BF0072833D /* Build configuration list for PBXNativeTarget "TrapsAndTreasures" */;
 			buildPhases = (
+				B1D53DF3CCDA7AD9F1C89796 /* [CP] Check Pods Manifest.lock */,
 				D06074A01EA856BF0072833D /* Sources */,
 				D06074A11EA856BF0072833D /* Frameworks */,
 				D06074A21EA856BF0072833D /* Resources */,
+				15F2CD638C7AF4AC72DC69FD /* [CP] Embed Pods Frameworks */,
+				F4C1BC8D6530E76D87EF4533 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,7 +144,7 @@
 				TargetAttributes = {
 					D06074A31EA856BF0072833D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5RAB5T5U95;
+						DevelopmentTeam = 7VHEE96NS5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -154,6 +181,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15F2CD638C7AF4AC72DC69FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrapsAndTreasures/Pods-TrapsAndTreasures-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1D53DF3CCDA7AD9F1C89796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C1BC8D6530E76D87EF4533 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrapsAndTreasures/Pods-TrapsAndTreasures-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D06074A01EA856BF0072833D /* Sources */ = {
@@ -287,12 +362,13 @@
 		};
 		D06074B71EA856BF0072833D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E85BE6DCBD842345642553 /* Pods-TrapsAndTreasures.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5RAB5T5U95;
+				DEVELOPMENT_TEAM = 7VHEE96NS5;
 				INFOPLIST_FILE = TrapsAndTreasures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.osucascades.cs496.TrapsAndTreasures-";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.osucascades.cs496.TrapsAndTreasures-lundy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -300,12 +376,13 @@
 		};
 		D06074B81EA856BF0072833D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9987BE8AB43A92DD3B525BD7 /* Pods-TrapsAndTreasures.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5RAB5T5U95;
+				DEVELOPMENT_TEAM = 7VHEE96NS5;
 				INFOPLIST_FILE = TrapsAndTreasures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.osucascades.cs496.TrapsAndTreasures-";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.osucascades.cs496.TrapsAndTreasures-lundy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K3i-gJ-C3a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K3i-gJ-C3a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,9 +55,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UL-FN-sdr">
-                                <rect key="frame" x="164" y="562" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UL-FN-sdr">
+                                <rect key="frame" x="170" y="562" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="gEh-om-1Vp" kind="show" id="UEY-hk-Iv9"/>
@@ -66,9 +65,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7UL-FN-sdr" secondAttribute="bottom" constant="75" id="Yf6-RP-zaQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I6n-Yh-dAG" secondAttribute="trailing" id="aKx-Ex-vSA"/>
                             <constraint firstItem="r4o-TK-TOU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="f32-0f-UJh"/>
                             <constraint firstItem="r4o-TK-TOU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hVi-Mh-XdL"/>
+                            <constraint firstItem="7UL-FN-sdr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sGl-ST-rBV"/>
                             <constraint firstItem="I6n-Yh-dAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ve2-zt-ITH"/>
                             <constraint firstItem="I6n-Yh-dAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="214" id="zOA-dj-9gI"/>
                         </constraints>
@@ -309,7 +310,7 @@
         <scene sceneID="ORf-OI-q93">
             <objects>
                 <navigationController id="K3i-gJ-C3a" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yux-h6-WHu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yux-h6-WHu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
