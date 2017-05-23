@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PusherSwift
 
 class GameplayController: UIViewController {
     
@@ -29,6 +30,11 @@ class GameplayController: UIViewController {
     
     let noMovesAlert = UIAlertController(title: "Out of Moves", message: "Click the get moves button to get more moves", preferredStyle: .alert)
     
+    let pusher = Pusher(
+        key: "338b7804d638b00a56a2",
+        options: PusherClientOptions(host: .cluster("us2"))
+    )
+    
     //MARK: Load Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +44,18 @@ class GameplayController: UIViewController {
             print("OK")
         }
         noMovesAlert.addAction(action)
+        
+        let channel = pusher.subscribe("movement")
+        
+        let _ = channel.bind(eventName: "new", callback: { (data: Any?) -> Void in
+            if let data = data as? [String : AnyObject] {
+                if let message = data["message"] as? String {
+                    print(message)
+                }
+            }
+        })
+        
+        pusher.connect()
     }
     
     // runs everytime the view is about to load
