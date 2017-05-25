@@ -15,6 +15,7 @@ class GameplayController: UIViewController {
     @IBOutlet weak var playerMovesLabel: UILabel!
     @IBOutlet weak var playerAvatar: UILabel!
     @IBOutlet weak var playerTrapCountLabel: UILabel!
+    @IBOutlet weak var enemyAvatar1: UILabel!
     
     @IBOutlet var tiles: [UIView]!
     
@@ -45,12 +46,16 @@ class GameplayController: UIViewController {
         }
         noMovesAlert.addAction(action)
         
-        let channel = pusher.subscribe("movement")
+        let channel = pusher.subscribe("movements")
         
-        let _ = channel.bind(eventName: "new", callback: { (data: Any?) -> Void in
+        let _ = channel.bind(eventName: "player-move", callback: { (data: Any?) -> Void in
             if let data = data as? [String : AnyObject] {
-                if let message = data["message"] as? String {
-                    print(message)
+                var stringloc = data["new_location"] as! String
+                var stringplayer = data["player_id"] as! String
+                
+                if let location = Int(stringloc),
+                       let player = Int(stringplayer) {
+                        self.placePlayer(playerId: player, newLocation: location)
                 }
             }
         })
@@ -104,6 +109,15 @@ class GameplayController: UIViewController {
         
         tiles[index].addSubview(playerAvatar)
         playerAvatar.bringSubview(toFront: tiles[index])
+    }
+    
+    public func placePlayer(playerId: Int, newLocation: Int){
+        if(playerId != 666){
+            if (newLocation < 5 && newLocation >= 0){
+                tiles[newLocation].addSubview(enemyAvatar1)
+                enemyAvatar1.bringSubview(toFront: tiles[newLocation])
+            }
+        }
     }
     
     //goes with addgesture and isuserenabled stuff
