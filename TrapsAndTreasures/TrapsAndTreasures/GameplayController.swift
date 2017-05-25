@@ -18,8 +18,6 @@ class GameplayController: UIViewController {
     
     @IBOutlet var tiles: [UIView]!
     
-    let urlString = URL(string: "https://secret-escarpment-42025.herokuapp.com/666/move/666")
-
     var index = 0
     let defaults = UserDefaults.standard
     let playerMovesCountKey = "playerMovesCount"
@@ -135,6 +133,10 @@ class GameplayController: UIViewController {
         defaults.set(index, forKey: "playerIndex")
         
         // send request to server
+        
+        let urlString = URL(string: "https://secret-escarpment-42025.herokuapp.com/666/move/\(index)")
+
+        
         if let url = urlString {
             let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                 if error != nil {
