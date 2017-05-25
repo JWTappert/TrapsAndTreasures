@@ -10,7 +10,6 @@
 		25F3A8DC2D137A8915E9C7C6 /* Pods_TrapsAndTreasures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BD88CBED83AC298CD17348 /* Pods_TrapsAndTreasures.framework */; };
 		D018626C1EAC3E0C005F6409 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */; };
 		D01862701EAC433B005F6409 /* tnt.png in Resources */ = {isa = PBXBuildFile; fileRef = D018626F1EAC433B005F6409 /* tnt.png */; };
-		D01862721EADC858005F6409 /* sunnys.png in Resources */ = {isa = PBXBuildFile; fileRef = D01862711EADC858005F6409 /* sunnys.png */; };
 		D01ECF7E1EB28782000D7D84 /* GameWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF7D1EB28782000D7D84 /* GameWorld.swift */; };
 		D01ECF801EB288EB000D7D84 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF7F1EB288EB000D7D84 /* Tile.swift */; };
 		D0547BA71EA955F5007847F9 /* GameplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0547BA61EA955F5007847F9 /* GameplayController.swift */; };
@@ -28,7 +27,6 @@
 		9987BE8AB43A92DD3B525BD7 /* Pods-TrapsAndTreasures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrapsAndTreasures.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrapsAndTreasures/Pods-TrapsAndTreasures.release.xcconfig"; sourceTree = "<group>"; };
 		D018626B1EAC3E0C005F6409 /* SplashScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		D018626F1EAC433B005F6409 /* tnt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tnt.png; path = ../tnt.png; sourceTree = "<group>"; };
-		D01862711EADC858005F6409 /* sunnys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sunnys.png; path = ../sunnys.png; sourceTree = "<group>"; };
 		D01ECF7D1EB28782000D7D84 /* GameWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameWorld.swift; sourceTree = "<group>"; };
 		D01ECF7F1EB288EB000D7D84 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		D0547BA61EA955F5007847F9 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		D060749B1EA856BF0072833D = {
 			isa = PBXGroup;
 			children = (
-				D01862711EADC858005F6409 /* sunnys.png */,
 				D018626F1EAC433B005F6409 /* tnt.png */,
 				D06074A61EA856BF0072833D /* TrapsAndTreasures */,
 				D06074A51EA856BF0072833D /* Products */,
@@ -174,7 +171,6 @@
 			files = (
 				D01862701EAC433B005F6409 /* tnt.png in Resources */,
 				D06074B21EA856BF0072833D /* LaunchScreen.storyboard in Resources */,
-				D01862721EADC858005F6409 /* sunnys.png in Resources */,
 				D06074AF1EA856BF0072833D /* Assets.xcassets in Resources */,
 				D06074AD1EA856BF0072833D /* Main.storyboard in Resources */,
 			);

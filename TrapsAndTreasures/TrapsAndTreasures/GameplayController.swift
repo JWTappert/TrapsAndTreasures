@@ -18,6 +18,8 @@ class GameplayController: UIViewController {
     
     @IBOutlet var tiles: [UIView]!
     
+    let urlString = URL(string: "https://secret-escarpment-42025.herokuapp.com/666/move/666")
+
     var index = 0
     let defaults = UserDefaults.standard
     let playerMovesCountKey = "playerMovesCount"
@@ -130,9 +132,24 @@ class GameplayController: UIViewController {
         playerMovesCount = playerMovesCount! - 1
         playerMovesLabel.text = "\(String(describing: playerMovesCount!))"
         
-        
         defaults.set(index, forKey: "playerIndex")
+        
+        // send request to server
+        if let url = urlString {
+            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                if error != nil {
+                    print(error!)
+                } else {
+                    if let usableData = data {
+                        print("response from server: \(String(describing: NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)))") //JSONSerialization
+                    }
+                }
+            }
+            task.resume()
+        }
     }
+    
+    
     @IBAction func dropTrap(_ sender: UILongPressGestureRecognizer) {
         if playerTrapCount! <= 0 {
             print("You out of traps, fam")
